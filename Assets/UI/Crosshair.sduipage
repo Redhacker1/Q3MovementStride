@@ -1,0 +1,39 @@
+!UIPageAsset
+Id: d0432903-716b-4dab-9140-12615a656eec
+SerializedVersion: {Stride: 2.1.0.1}
+Tags: []
+Design:
+    Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+Hierarchy:
+    RootParts:
+        - !Grid ref!! f2de2e8d-b83f-48c9-930a-808f5f397f6b
+    Parts:
+        -   UIElement: !ImageElement
+                Id: c7508c9d-0b48-4dc7-a0df-e0f8ebdbc29c
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 50.0
+                HorizontalAlignment: Center
+                VerticalAlignment: Center
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Source: !SpriteFromTexture
+                    Texture: 91e91148-a87e-4253-bc8b-d58a3cc5f09a:Crosshair256
+                    PixelsPerUnit: 400.0
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 255, A: 255}
+        -   UIElement: !Grid
+                Id: f2de2e8d-b83f-48c9-930a-808f5f397f6b
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Children:
+                    486162d4888449270e0dd54bb11d20d8: !ImageElement ref!! c7508c9d-0b48-4dc7-a0df-e0f8ebdbc29c
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}

@@ -1,0 +1,228 @@
+!PrefabAsset
+Id: b16eaf2b-c449-482a-b153-8dca932a1fc5
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! ce1caacb-bb27-4e8a-908c-95267265d516
+    Parts:
+        -   Entity:
+                Id: 3642e828-7f2e-4b20-81df-4034d43c8587
+                Name: MagazineModel
+                Components:
+                    3d9c1cc499067d46a84e5274b42e9de3: !TransformComponent
+                        Id: 51f16f17-8cb2-402f-8101-2d5f013541c3
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    14266246fced0e4486392429f9504708: !ModelComponent
+                        Id: 8330484f-46dd-493d-9a65-bf111f8c1632
+                        Model: 5136a436-99e7-450f-b6e7-b4bb7c4cf871:Models/MagazineModel
+                        Materials: {}
+                    1668c7b09aefcc42a71e4470c1bdf8e9: !ModelNodeLinkComponent
+                        Id: 6ba434b9-7a62-4357-af69-9d605a3ece46
+                        Target: null
+                        NodeName: MagazineBone
+        -   Entity:
+                Id: 47503150-d4ed-4851-9765-5fc2c08dc3db
+                Name: EffectsFeedback
+                Components:
+                    321d321c570d3e43a2a274d71d7258f5: !TransformComponent
+                        Id: 13083936-180a-4a32-a5a0-fc375945cb94
+                        Position: {X: 3.225738E-08, Y: 0.1441944, Z: -0.80561554}
+                        Rotation: {X: 0.70710677, Y: 3.8090255E-07, Z: -3.8090255E-07, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    adcef907076b903b6dc8549294427d49: !MyFPSTest.EffectController,MyFPSTest.Game
+                        Id: 3367299b-e7ae-49a3-b950-5b6f4b40db48
+                        TriggerGroup:
+                            Name: Gunfire
+                            TriggerEvents:
+                                cc2e7fd643efee43a5334538e258744d:
+                                    Name: MuzzleFlash
+                                    SourcePrefab: cbf08506-e7dc-41a6-8c95-38dccc9624b1:VFXPrefabs/vfx-RichMuzzleFlash
+                                    FollowEntity: true
+                                    Duration: 0.6
+                                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    Rotation: {X: 1.0, Y: 0.0, Z: 0.0, W: -4.371139E-08}
+                                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                c2b4a07f896d1143868abfae468c8a51:
+                                    Name: BulletImpact
+                                    SourcePrefab: 79460cee-b4d0-4688-a08f-37c2bfa44ea2:VFXPrefabs/vfx-RichBulletImpact
+                                    FollowEntity: false
+                                    Duration: 1.0
+                                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                25a41a6e2c1e89449f410d4cd3a33c89:
+                                    Name: DamagedTrail
+                                    SourcePrefab: 475cfbeb-e086-4981-832f-dd2bdcab53d4:VFXPrefabs/vfx-DamagedTrail
+                                    FollowEntity: true
+                                    Duration: 6.0
+                                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+        -   Entity:
+                Id: 49d3f7c1-6aea-46b7-a803-13b38ea40389
+                Name: Camera
+                Components:
+                    e7530b9a6be27e47b405f3991f670c13: !TransformComponent
+                        Id: b39be7e8-67a8-4bc0-9d03-929ac6ec401f
+                        Position: {X: 0.0, Y: 1.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            1fe64d64198b4543bfc6b549158775e4: ref!! 7a84afe7-aa61-4a59-a1ec-336532e60426
+                    bdcec17990d67f4eb9d1d3a9197c95a2: !CameraComponent
+                        Id: 9b07acfd-4856-40dc-a63c-57e1cf2b2d8d
+                        Name: null
+                        Projection: Perspective
+                        VerticalFieldOfView: 110.0
+                        NearClipPlane: 0.001
+                        Slot: f1ef5817-0725-4b1a-abc9-845d101ec0e6
+                    8a944ab254058c9419f349b1dac150dc: !MyFPSTest.FpsCamera,MyFPSTest.Game
+                        Id: 424c3815-a432-41bb-84b3-d04ae80dd55e
+                        RotationSpeed: 0.02355
+                        RotationAdaptationSpeed: 5.0
+                    e0f457bb92abf2d59d2fd9b9b97310c1: !MyFPSTest.Player.WeaponScript,MyFPSTest.Game
+                        Id: 6e40926d-4ca8-459b-a226-54c2eccb2a3b
+                        MaxShootDistance: 50.0
+                        ShootImpulse: 12.0
+                        Cooldown: 0.4
+                        ReloadCooldown: 2.0
+                        RemainingBullets: ref!! f1ab978d-bb0c-4f6b-8cb1-fb0482726fd7
+                    5ec3e774a44eadc33cc75d4b974e0952: !UIComponent
+                        Id: cf9937dd-b32e-4068-8f35-faa5998ff45d
+                        Page: d0432903-716b-4dab-9140-12615a656eec:UI/Crosshair
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.28, Y: 0.72, Z: 1.0}
+        -   Entity:
+                Id: a9bbd566-b54a-48d9-b605-2f8373c37ef0
+                Name: BulletCount
+                Components:
+                    3874058b00661242806d2e3f4afd55c1: !TransformComponent
+                        Id: b6263859-702c-496b-b4d9-af827644e506
+                        Position: {X: 0.00064765656, Y: 0.17203088, Z: -0.010609664}
+                        Rotation: {X: -0.38512552, Y: 1.6653345E-16, Z: -3.366874E-08, W: 0.9228642}
+                        Scale: {X: 0.04, Y: 0.04, Z: 0.04}
+                        Children: {}
+                    a3de2d72fa2fc24d83c344dedd18fc64: !SpriteComponent
+                        Id: f1ab978d-bb0c-4f6b-8cb1-fb0482726fd7
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: f271b7d1-0e2b-4fec-b95b-324fe475a91c:Bullets
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+        -   Entity:
+                Id: ca6aa6ec-0ba0-41b4-afd6-e0904e96d1bd
+                Name: Hands
+                Components:
+                    1fe64d64198b4543bfc6b549158775e4: !TransformComponent
+                        Id: 7a84afe7-aa61-4a59-a1ec-336532e60426
+                        Position: {X: 0.0, Y: 0.0, Z: -0.048362926}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            a9c79a3bf064f945b8cb4a186967953c: ref!! 02071438-4904-4103-8f58-bbeb7c741b8b
+                            3d9c1cc499067d46a84e5274b42e9de3: ref!! 51f16f17-8cb2-402f-8101-2d5f013541c3
+                    67e963ed191c3a429b961323f89766e4: !ModelComponent
+                        Id: 094597ff-cbf9-47c5-bea5-ed87f529f820
+                        Model: d411ff7a-b34d-4e07-9bb8-ae79cecaa87d:Models/mannequinHandModel
+                        Materials: {}
+                    e7f9e12d8d35d348b360d0f05ad26c60: !AnimationComponent
+                        Id: 1e45887d-a46a-4250-8ceb-22212c13ccb0
+                        Animations: {}
+                    808f9e59c0ca4afe26aeefbca1a76eac: !MyFPSTest.Player.AnimationController,MyFPSTest.Game
+                        Id: c5dafde9-a5e8-4677-b623-99bde58eb23b
+                        AnimationComponent: ref!! 1e45887d-a46a-4250-8ceb-22212c13ccb0
+                        AnimationIdle: 95cafbf6-37c1-4dfe-b02a-47a47a413f49:Animations/Gun_Idle
+                        AnimationWalk: 6d83ee68-052d-41a5-9ec9-2b36232e98d5:Animations/Gun_Run
+                        AnimationShoot: 5a17a21a-9f99-4a88-8f9f-1382a86f22b0:Animations/Gun_Shoot
+                        AnimationReload: 5ffcf89a-a20d-4a70-a573-af7a47bdfe26:Animations/Gun_Reload
+                        TimeFactor: 1.0
+        -   Entity:
+                Id: ce1caacb-bb27-4e8a-908c-95267265d516
+                Name: PlayerCharacter
+                Components:
+                    458ac2590f953f4fb47242e21b3e420f: !TransformComponent
+                        Id: ed182a4d-71bd-4275-81fd-3773ab00f180
+                        Position: {X: -14.999999, Y: 0.0, Z: 14.999999}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            e7530b9a6be27e47b405f3991f670c13: ref!! b39be7e8-67a8-4bc0-9d03-929ac6ec401f
+                    87c25277a58ea44f81710ca69284e1dd: !CharacterComponent
+                        Id: c2079cfc-c929-4671-8c39-6b66ab95d5c0
+                        CollisionGroup: KinematicFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        FallSpeed: 10.0
+                        MaxSlope: {Radians: 0.785398}
+                        JumpSpeed: 0.0
+                        Gravity: {X: 0.0, Y: -20.0, Z: 0.0}
+                        ColliderShapes:
+                            c7ab0c6b38a28147baf5c58b2eea7674: !CapsuleColliderShapeDesc
+                                Length: 1.2
+                                Radius: 0.4
+                                LocalOffset: {X: 0.0, Y: 0.95, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    268cb3e016d7937c937ad5e248fb2828: !MyFPSTest.Player.PlayerInput,MyFPSTest.Game
+                        Id: 1d080585-0d9d-4f5a-b441-9517d8b135ff
+                        Priority: -1000
+                        DeadZone: 0.25
+                        Camera: ref!! 9b07acfd-4856-40dc-a63c-57e1cf2b2d8d
+                        MouseSensitivity: 100.0
+                        KeysLeft:
+                            79c1d8abdc0cce2b4221ece447bdec9e: Left
+                            0fe771bf0347303773c1aecc0768b5f3: A
+                        KeysRight:
+                            c252e2acf9e4758efd9baa879ef896f5: Right
+                            924ede849ca80a1141ea7b4cc4c9d2dd: D
+                        KeysUp:
+                            643ce2244c48c42beffae7d0a93fcca2: Up
+                            84e9bdfa0c56e6e70fb52fb67fdf26c0: W
+                        KeysDown:
+                            c710581bbfee7f9dbffa87d8b423a961: Down
+                            9861448150847263e1dcce732406e8b4: S
+                        KeysReload:
+                            f7748360940667938216bda161f12ed0: E
+                            05744cc71fc6762cd1820202d01398ed: R
+                    eb3c436fd4eb2c94f69dafab64bf1e1b: !MyFPSTest.Player.PlayerController,MyFPSTest.Game
+                        Id: 2d7e1374-9483-4afb-84fb-02921ba2efdb
+                        Priority: -1000
+                        friction: 6.0
+                        moveSpeed: 7.0
+                        runAcceleration: 14.0
+                        runDeacceleration: 10.0
+                        airAcceleration: 2.0
+                        airDecceleration: 2.0
+                        airControl: 0.3
+                        sideStrafeAcceleration: 50.0
+                        sideStrafeSpeed: 1.0
+                        holdJumpToBhop: false
+                        PreviousVelocity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Movedir: {X: 0.0, Y: 0.0, Z: 0.0}
+                        MaxRunSpeed: 5.0
+        -   Entity:
+                Id: da995152-6360-45d7-96cd-6be797de7f08
+                Name: Gun
+                Components:
+                    a9c79a3bf064f945b8cb4a186967953c: !TransformComponent
+                        Id: 02071438-4904-4103-8f58-bbeb7c741b8b
+                        Position: {X: 1.8508038E-15, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            321d321c570d3e43a2a274d71d7258f5: ref!! 13083936-180a-4a32-a5a0-fc375945cb94
+                            3874058b00661242806d2e3f4afd55c1: ref!! b6263859-702c-496b-b4d9-af827644e506
+                    efd695c8917b8a42a02ea11321380575: !ModelComponent
+                        Id: 18dfd384-f3ef-4d96-8008-53b77d56f04e
+                        Model: e9518998-0649-494e-b5db-2711f0d92a7e:Models/MachinegunModel
+                        Materials: {}
+                    39b0129ace88504c8b56a15efbeca890: !ModelNodeLinkComponent
+                        Id: afc40bd1-9ef9-4a40-86cf-20af41ed6be4
+                        Target: null
+                        NodeName: MachinegunBone

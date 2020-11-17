@@ -1,0 +1,8 @@
+!Texture
+Id: a87e8953-be18-4a5f-a1e8-8845c147c1cd
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../Resources/Textures/Smoke03/SMO001.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+IsStreamable: false
