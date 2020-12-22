@@ -1,0 +1,26 @@
+!PrefabAsset
+Id: ff4af0ac-17c4-43e3-aa7d-b3440315a67f
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! d983ee37-a05d-4fd0-89d4-0ba7be5023f2
+    Parts:
+        -   Entity:
+                Id: d983ee37-a05d-4fd0-89d4-0ba7be5023f2
+                Name: Info_Player_Start
+                Components:
+                    4f5292b1b3e66fbe1f2f7ecd11643a28: !TransformComponent
+                        Id: 47e8f33e-dea1-464f-8f05-3020e2470cc4
+                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.70710677, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    feb8e0b06984888bc5f141e4cb9ca739: !ModelComponent
+                        Id: eeaeba5f-2e53-434c-b9d1-4504135b31b9
+                        Model: a5346408-e600-4201-a761-e3793cfd38fb:Models/Box2x1x1
+                        IsShadowCaster: false
+                        Materials: {}
+                    1e0ff360a6c765394636b04437313a73: !MyFPSTest.Info_Player_Start,MyFPSTest.Game
+                        Id: 14de923b-498f-4afb-b05f-f020d2253eaf
+                        Priority: -1000000

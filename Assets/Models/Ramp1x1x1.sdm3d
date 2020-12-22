@@ -1,0 +1,15 @@
+!Model
+Id: 07e04973-bb4c-4dc0-9e1d-8d5dc68cd499
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../../Stride Projects/FirstPersonShooter/Resources/Models/Ramp1x1x1.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    2a4c62502d84612cd0bc56d6d0bc56d6:
+        Name: GridMT
+        MaterialInstance:
+            Material: adba1860-58d1-406b-afe7-a5e67606b0cb:Models/GridMT
+Modifiers: {}
+~SourceHashes:
+    3e29a58259ba8f4033510e93a53638cc~../../../../Stride Projects/FirstPersonShooter/Resources/Models/Ramp1x1x1.fbx: b94d946360b9311427e2e3085d4020ff

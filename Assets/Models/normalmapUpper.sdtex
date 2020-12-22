@@ -1,0 +1,7 @@
+!Texture
+Id: ab5f9425-dfed-4848-a701-0add24822afe
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../../Stride Projects/ThirdPersonPlatformer/Resources/Textures/normalmapUpper.png
+Type: !NormalMapTextureType {}
+IsStreamable: false

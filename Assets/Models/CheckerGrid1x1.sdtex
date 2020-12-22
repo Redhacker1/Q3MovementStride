@@ -1,0 +1,8 @@
+!Texture
+Id: e2c29e38-3443-4f5a-87b9-b87a01abb2d4
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../../Stride Projects/ThirdPersonPlatformer/Resources/Textures/CheckerGrid1x1.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+    Alpha: None

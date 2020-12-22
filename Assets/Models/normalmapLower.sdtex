@@ -1,0 +1,7 @@
+!Texture
+Id: 88dfe4aa-8b23-4356-a02e-9c7158c79f00
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../../Stride Projects/ThirdPersonPlatformer/Resources/Textures/normalmapLower.png
+Type: !NormalMapTextureType {}
+IsStreamable: false

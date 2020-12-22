@@ -1,6 +1,7 @@
 // Copyright (c) Stride contributors (https://stride3d.net) and Silicon Studio Corp. (https://www.siliconstudio.co.jp)
 // Distributed under the MIT license. See the LICENSE.md file in the project root for more information.
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
@@ -100,6 +101,9 @@ namespace MyFPSTest.Player
             var raycastEnd = raycastStart + forward * MaxShootDistance;
 
             var result = this.GetSimulation().Raycast(raycastStart, raycastEnd);
+            //result.
+
+            this.GetSimulation().ShapeSweepPenetrating(new SphereColliderShape(false, 100), Matrix.Zero, Matrix.Zero, new List<HitResult>());
 
             var weaponFired = new WeaponFiredResult {HitResult = result, DidFire = true, DidHit = false };
 

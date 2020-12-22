@@ -1,0 +1,37 @@
+!PrefabAsset
+Id: 079bafc0-583f-4ec9-b707-143d4d984529
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 968ff456-415d-4211-876c-a9569329c801
+    Parts:
+        -   Entity:
+                Id: 968ff456-415d-4211-876c-a9569329c801
+                Name: Trigger_Level_Start
+                Components:
+                    851acea0e3a4d36076c7aabf53abfe17: !TransformComponent
+                        Id: 07266d6d-88d4-4574-b0d8-08d8ca37b383
+                        Position: {X: -25.804575, Y: -1.0193492, Z: -10.633415}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    a9a74f70d76870e2aee4df009f734670: !StaticColliderComponent
+                        Id: 3aa115af-a3ae-4f2b-a315-3e20fddc6d31
+                        CollisionGroup: SensorTrigger
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            62f480a6ab04f1329ca6f53a0ec9a1c3: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 2.0, Y: 2.0, Z: 2.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    ac868a9834e4b6354c4d68764c1d9be9: !MyFPSTest.Trigger_ChangeLvl,MyFPSTest.Game
+                        Id: d222385b-603c-4e1d-a193-69729118c321

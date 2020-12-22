@@ -1,4 +1,4 @@
-// Copyright (c) Stride contributors (https://stride3d.net) and Silicon Studio Corp. (https://www.siliconstudio.co.jp)
+﻿// Copyright (c) Stride contributors (https://stride3d.net) and Silicon Studio Corp. (https://www.siliconstudio.co.jp)
 // Distributed under the MIT license. See the LICENSE.md file in the project root for more information.
 using System;
 using Stride.Core;
@@ -6,6 +6,7 @@ using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Engine.Events;
 using Stride.Physics;
+using Stride.Audio;
 
 namespace MyFPSTest.Player
 {
@@ -49,14 +50,16 @@ namespace MyFPSTest.Player
         public Vector3 Movedir = Vector3.Zero;
 
         private readonly EventReceiver<bool> QueueJump_Event = new EventReceiver<bool>(PlayerInput.QueueJump_Event);
+        private readonly AudioEmitter JumpEmitter = new AudioEmitter();
 
         /// <summary>
         /// Called when the script is first initialized
         /// </summary>
         public override void Start()
         {
+            Log.ActivateLog(Stride.Core.Diagnostics.LogMessageType.Debug);
+            Log.Debug("Starting Log");
             base.Start();
-
             // Will search for an CharacterComponent within the same entity as this script
             character = Entity.Get<CharacterComponent>();
             if (character == null) throw new ArgumentException("Please add a CharacterComponent to the entity containing PlayerController!");
@@ -69,6 +72,7 @@ namespace MyFPSTest.Player
         {
             PreviousVelocity = playerVelocity;
             moveDirectionEvent.TryReceive(out Movedir);
+            Console.WriteLine(playerVelocity);
 
             OnGUI();
             QueueJump();
@@ -76,12 +80,27 @@ namespace MyFPSTest.Player
             if (character.IsGrounded)
             {
                 GroundMove();
-                character.SetVelocity(playerVelocity);
+                if(playerVelocity != Vector3.Zero || playerVelocity != Vector3.One)
+                {
+                    character.SetVelocity(playerVelocity);
+                }
+                else if (Math.Abs(playerVelocity.Z) == 0 && Math.Abs(playerVelocity.X) == 0 && Math.Abs(playerVelocity.Y) == 0)
+                {
+
+                }
+                else
+                {
+                    playerVelocity -= float.Epsilon*2;
+                    character.SetVelocity(playerVelocity);
+                }
             }
             else if (!character.IsGrounded)
             {
                 AirMove();
-                character.SetVelocity(playerVelocity);
+                if (playerVelocity != Vector3.Zero)
+                {
+                    character.SetVelocity(playerVelocity);
+                }
             }
         }
 
@@ -136,10 +155,10 @@ namespace MyFPSTest.Player
          */
         private void AirControl(Vector3 wishdir, float wishspeed)
         {
-            float zspeed;
-            float speed;
-            float dot;
-            float k;
+            double zspeed;
+            double speed;
+            double dot;
+            double k;
 
             // Can't control movement if not moving forward or backward
             if (Math.Abs(Movedir.Z) < 0.001 || Math.Abs(wishspeed) < 0.001)
@@ -152,21 +171,21 @@ namespace MyFPSTest.Player
 
             dot = Vector3.Dot(playerVelocity, wishdir);
             k = 32;
-            k *= airControl * dot * dot * (float)Game.DrawTime.TimePerFrame.TotalSeconds;
+            k *= airControl * Math.Pow(dot, 2) * (float)Game.DrawTime.TimePerFrame.TotalSeconds;
 
             // Change direction while slowing down
             if (dot > 0)
             {
-                playerVelocity.X = playerVelocity.X * speed + wishdir.X * k;
-                playerVelocity.Y = playerVelocity.Y * speed + wishdir.Y * k;
-                playerVelocity.Z = playerVelocity.Z * speed + wishdir.Z * k;
+                playerVelocity.X = (float)(playerVelocity.X * speed + wishdir.X * k);
+                playerVelocity.Y = (float)(playerVelocity.Y * speed + wishdir.Y * k);
+                playerVelocity.Z = (float)(playerVelocity.Z * speed + wishdir.Z * k);
 
                 playerVelocity.Normalize();
             }
 
-            playerVelocity.X *= speed;
-            playerVelocity.Y = zspeed; // Note this line
-            playerVelocity.Z *= speed;
+            playerVelocity.X *= (float)speed;
+            playerVelocity.Y = (float)zspeed; // Note this line
+            playerVelocity.Z *= (float)speed;
 
         }
 
@@ -221,6 +240,8 @@ namespace MyFPSTest.Player
 
             if (wishJump)
             {
+                Sound JumpSound = new Sound();
+                //JumpSound.CreateInstance(null, false, false, 0F, HrtfEnvironment.Small);
                 character.Jump();
                 wishJump = false;
             }

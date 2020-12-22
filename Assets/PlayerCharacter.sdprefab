@@ -145,7 +145,7 @@ Hierarchy:
                 Components:
                     458ac2590f953f4fb47242e21b3e420f: !TransformComponent
                         Id: ed182a4d-71bd-4275-81fd-3773ab00f180
-                        Position: {X: -14.999999, Y: 0.0, Z: 14.999999}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -164,8 +164,8 @@ Hierarchy:
                         JumpSpeed: 0.0
                         Gravity: {X: 0.0, Y: -20.0, Z: 0.0}
                         ColliderShapes:
-                            c7ab0c6b38a28147baf5c58b2eea7674: !CapsuleColliderShapeDesc
-                                Length: 1.2
+                            a4cf870fe72b42f5d4cee35430ecd051: !CylinderColliderShapeDesc
+                                Height: 1.2
                                 Radius: 0.4
                                 LocalOffset: {X: 0.0, Y: 0.95, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}

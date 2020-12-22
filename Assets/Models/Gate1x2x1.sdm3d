@@ -1,0 +1,15 @@
+!Model
+Id: e14ddbd3-8396-4cff-90a4-5252af08580c
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../../Stride Projects/FirstPersonShooter/Resources/Models/Gate1x2x1.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    2a4c62502d84612cd0bc56d6d0bc56d6:
+        Name: GridMT
+        MaterialInstance:
+            Material: adba1860-58d1-406b-afe7-a5e67606b0cb:Models/GridMT
+Modifiers: {}
+~SourceHashes:
+    4668a70431ec57b8a7efee8c95406957~../../../../Stride Projects/FirstPersonShooter/Resources/Models/Gate1x2x1.fbx: f59702a2cf214fed3d2358f4328a66cb

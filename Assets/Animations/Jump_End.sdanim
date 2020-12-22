@@ -1,0 +1,19 @@
+!Animation
+Id: ec35e4b0-6596-4716-80dd-d8b780a8382d
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../Resources/Animation/Jump_End.fbx
+ClipDuration:
+    Enabled: false
+    StartAnimationTime: 0:00:00:00.0000000
+    EndAnimationTime: 0:00:30:00.0000000
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+RepeatMode: LoopInfinite
+Type: !StandardAnimationAssetType {}
+Skeleton: c5910edc-2ec5-4989-805c-96c08c1e7bbc:Models/mannequinModel Skeleton
+RootMotion: false
+PreviewModel: null
+AnimationTimeMinimum: 0:00:00:00.0000000
+AnimationTimeMaximum: 0:00:00:00.4830000
+~SourceHashes:
+    ebe78a6d7747dc5b4f8c51b4211464c3~../../Resources/Animation/Jump_End.fbx: 818906ede58fbbe43135bfd20ba0fea4

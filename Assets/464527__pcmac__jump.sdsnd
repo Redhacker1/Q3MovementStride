@@ -1,0 +1,8 @@
+!Sound
+Id: 82826cec-2d99-4c07-b853-10fc024ea0e7
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file E:/Downloads/464527__pcmac__jump.wav
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false
