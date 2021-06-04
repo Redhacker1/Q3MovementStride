@@ -84,6 +84,8 @@ Hierarchy:
         - ref!! 76771248-c30c-4247-a20e-69306cfdb1cd
         - ref!! cdb18770-32bc-4c12-9621-4ca02f87c6c1
         - ref!! 181b5e62-44ac-426d-a40d-fa2181e60c9d
+        - ref!! eda475a4-9311-4f89-97a2-96b0b9789d22
+        - ref!! 2dd8739b-cd68-4f7b-93ca-a401a8be00d9
     Parts:
         -   Entity:
                 Id: 003ea996-d3d5-46e1-8f7c-e934945032b4
@@ -1195,6 +1197,77 @@ Hierarchy:
                 BasePartId: 1067d427-d2bf-41dc-a6a9-edec00e56c37
                 InstanceId: 2fd89522-c686-4a8d-8d4b-ae7e049e4c92
         -   Entity:
+                Id: 23dd821f-5b2e-408a-96b1-cc23ba27d155
+                Name: PlayerCharacter
+                Components:
+                    458ac2590f953f4fb47242e21b3e420f: !TransformComponent
+                        Id: 366efe65-d343-4e5f-9d36-f06376f26703
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            e7530b9a6be27e47b405f3991f670c13: ref!! 3f23cdc1-ee88-40b3-9c88-f1a366099e27
+                    87c25277a58ea44f81710ca69284e1dd: !CharacterComponent
+                        Id: 30c0078e-f828-4ca2-a4d5-201e9bc47595
+                        CollisionGroup: KinematicFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        FallSpeed: 10.0
+                        MaxSlope: {Radians: 0.785398}
+                        JumpSpeed: 0.0
+                        Gravity: {X: 0.0, Y: -20.0, Z: 0.0}
+                        ColliderShapes:
+                            a4cf870fe72b42f5d4cee35430ecd051: !CylinderColliderShapeDesc
+                                Height: 1.2
+                                Radius: 0.4
+                                LocalOffset: {X: 0.0, Y: 0.95, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    268cb3e016d7937c937ad5e248fb2828: !MyFPSTest.Player.PlayerInput,MyFPSTest.Game
+                        Id: 27e00fcd-1ff1-402b-9bf2-52f7c057f2ef
+                        Priority: -1000
+                        DeadZone: 0.25
+                        Camera: ref!! 768522dc-afd1-4c62-af3e-2f766417a0cc
+                        MouseSensitivity: 100.0
+                        KeysLeft:
+                            79c1d8abdc0cce2b4221ece447bdec9e: Left
+                            0fe771bf0347303773c1aecc0768b5f3: A
+                        KeysRight:
+                            c252e2acf9e4758efd9baa879ef896f5: Right
+                            924ede849ca80a1141ea7b4cc4c9d2dd: D
+                        KeysUp:
+                            643ce2244c48c42beffae7d0a93fcca2: Up
+                            84e9bdfa0c56e6e70fb52fb67fdf26c0: W
+                        KeysDown:
+                            c710581bbfee7f9dbffa87d8b423a961: Down
+                            9861448150847263e1dcce732406e8b4: S
+                        KeysReload:
+                            f7748360940667938216bda161f12ed0: E
+                            05744cc71fc6762cd1820202d01398ed: R
+                    eb3c436fd4eb2c94f69dafab64bf1e1b: !MyFPSTest.Player.PlayerController,MyFPSTest.Game
+                        Id: 3e34ae16-3c38-408b-b68e-3bed09f75540
+                        Priority: -1000
+                        friction: 6.0
+                        moveSpeed: 7.0
+                        runAcceleration: 14.0
+                        runDeacceleration: 10.0
+                        airAcceleration: 2.0
+                        airDecceleration: 2.0
+                        airControl: 0.3
+                        sideStrafeAcceleration: 50.0
+                        sideStrafeSpeed: 1.0
+                        holdJumpToBhop: false
+                        PreviousVelocity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Movedir: {X: 0.0, Y: 0.0, Z: 0.0}
+                        MaxRunSpeed: 5.0
+            Base:
+                BasePartAsset: b16eaf2b-c449-482a-b153-8dca932a1fc5:PlayerCharacter
+                BasePartId: ce1caacb-bb27-4e8a-908c-95267265d516
+                InstanceId: 83b7304b-34e4-4e81-9169-61dbd9711491
+        -   Entity:
                 Id: 2465c51f-aeb3-4d47-ad09-ce880125dc68
                 Name: GridBase10x10
                 Components:
@@ -1606,6 +1679,17 @@ Hierarchy:
                 BasePartId: fbdff817-df62-4a56-83f8-19a9d12589b8
                 InstanceId: d9bb0c38-0092-4a2d-b8c7-2585c0f0e8a5
         -   Entity:
+                Id: 2dd8739b-cd68-4f7b-93ca-a401a8be00d9
+                Name: PlayerCharacter
+                Components:
+                    8ef72e3b2729d488bf34b48f7347f45c: !TransformComponent
+                        Id: 7242168a-041f-48e9-9c0e-42b8a48d6f15
+                        Position: {X: 9.164383, Y: 1.1920929E-07, Z: -5.8204823}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            6dc583985c87c84ec37d302bdd3cbf75: ref!! 366efe65-d343-4e5f-9d36-f06376f26703
+        -   Entity:
                 Id: 2ea8e6f8-cdc3-4d09-bd2c-f5cd331e1911
                 Name: GridBase10x10
                 Components:
@@ -1982,6 +2066,28 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             1fd94bf6112e05418d8b81f8ee7c0a28: ref!! ddf24ffc-c119-4b56-b5b0-47991d303c90
+        -   Entity:
+                Id: 3a8d49f0-0081-4a54-b731-8eef5345bf4b
+                Name: MagazineModel
+                Components:
+                    3d9c1cc499067d46a84e5274b42e9de3: !TransformComponent
+                        Id: be41ef0c-9980-4d7e-b30e-99102376d64a
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    14266246fced0e4486392429f9504708: !ModelComponent
+                        Id: f2e8e035-aa18-437e-a21b-cdfef1db023f
+                        Model: 5136a436-99e7-450f-b6e7-b4bb7c4cf871:Models/MagazineModel
+                        Materials: {}
+                    1668c7b09aefcc42a71e4470c1bdf8e9: !ModelNodeLinkComponent
+                        Id: 6036fea4-0ee9-4f2b-b411-14e5c7730381
+                        Target: null
+                        NodeName: MagazineBone
+            Base:
+                BasePartAsset: b16eaf2b-c449-482a-b153-8dca932a1fc5:PlayerCharacter
+                BasePartId: 3642e828-7f2e-4b20-81df-4034d43c8587
+                InstanceId: 83b7304b-34e4-4e81-9169-61dbd9711491
         -   Entity:
                 Id: 3bf9b6f7-e853-4159-ae02-acd9240318a9
                 Name: GridBase10x10
@@ -4763,6 +4869,37 @@ Hierarchy:
                 BasePartId: b045349c-565e-4488-9130-a795b0e3b229
                 InstanceId: 6a075321-91c4-4140-b08b-53e743b36165
         -   Entity:
+                Id: 9d2f3e0e-ba80-4e93-84e1-d2c4a7e1d9e1
+                Name: Hands
+                Components:
+                    1fe64d64198b4543bfc6b549158775e4: !TransformComponent
+                        Id: a3d17b04-1b36-4b9c-bc72-bd148a2ae3da
+                        Position: {X: 0.0, Y: 0.0, Z: -0.048362926}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            a9c79a3bf064f945b8cb4a186967953c: ref!! 76c70bbf-d4de-49d2-9f26-a7f752619a17
+                            3d9c1cc499067d46a84e5274b42e9de3: ref!! be41ef0c-9980-4d7e-b30e-99102376d64a
+                    67e963ed191c3a429b961323f89766e4: !ModelComponent
+                        Id: aea2b2c8-6f4f-4fae-a744-f6ed4e7b7b73
+                        Model: d411ff7a-b34d-4e07-9bb8-ae79cecaa87d:Models/mannequinHandModel
+                        Materials: {}
+                    e7f9e12d8d35d348b360d0f05ad26c60: !AnimationComponent
+                        Id: 80e63ec0-a77f-4a85-bb3e-d6fa77c346c5
+                        Animations: {}
+                    808f9e59c0ca4afe26aeefbca1a76eac: !MyFPSTest.Player.AnimationController,MyFPSTest.Game
+                        Id: f54c627c-c3b1-404a-8cbd-9d5fbb11d4a1
+                        AnimationComponent: ref!! 80e63ec0-a77f-4a85-bb3e-d6fa77c346c5
+                        AnimationIdle: 95cafbf6-37c1-4dfe-b02a-47a47a413f49:Animations/Gun_Idle
+                        AnimationWalk: 6d83ee68-052d-41a5-9ec9-2b36232e98d5:Animations/Gun_Run
+                        AnimationShoot: 5a17a21a-9f99-4a88-8f9f-1382a86f22b0:Animations/Gun_Shoot
+                        AnimationReload: 5ffcf89a-a20d-4a70-a573-af7a47bdfe26:Animations/Gun_Reload
+                        TimeFactor: 1.0
+            Base:
+                BasePartAsset: b16eaf2b-c449-482a-b153-8dca932a1fc5:PlayerCharacter
+                BasePartId: ca6aa6ec-0ba0-41b4-afd6-e0904e96d1bd
+                InstanceId: 83b7304b-34e4-4e81-9169-61dbd9711491
+        -   Entity:
                 Id: 9d370c9a-f0c1-4107-825b-05d5cace5375
                 Name: Wall0x2x5
                 Components:
@@ -5001,6 +5138,76 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             db07bec9b88cb84e9f8d6d3511eb10f2: ref!! 998654e2-2552-4dbb-ab84-081012503c7c
+        -   Entity:
+                Id: a5c5d500-a327-45ec-b030-6f4fbdc7ec9b
+                Name: PlayerCharacter
+                Components:
+                    458ac2590f953f4fb47242e21b3e420f: !TransformComponent
+                        Id: 933d4277-5e35-4ea2-9cd8-0d1af36ad567
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    87c25277a58ea44f81710ca69284e1dd: !CharacterComponent
+                        Id: e45cad4b-da9c-4049-bf39-a1ff77555afe
+                        CollisionGroup: KinematicFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        FallSpeed: 10.0
+                        MaxSlope: {Radians: 0.785398}
+                        JumpSpeed: 0.0
+                        Gravity: {X: 0.0, Y: -20.0, Z: 0.0}
+                        ColliderShapes:
+                            a4cf870fe72b42f5d4cee35430ecd051: !CylinderColliderShapeDesc
+                                Height: 1.2
+                                Radius: 0.4
+                                LocalOffset: {X: 0.0, Y: 0.95, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    268cb3e016d7937c937ad5e248fb2828: !MyFPSTest.Player.PlayerInput,MyFPSTest.Game
+                        Id: 43146c08-c072-44ff-bab9-02fa5f301199
+                        Priority: -1000
+                        DeadZone: 0.25
+                        Camera*: null
+                        MouseSensitivity: 100.0
+                        KeysLeft:
+                            79c1d8abdc0cce2b4221ece447bdec9e: Left
+                            0fe771bf0347303773c1aecc0768b5f3: A
+                        KeysRight:
+                            c252e2acf9e4758efd9baa879ef896f5: Right
+                            924ede849ca80a1141ea7b4cc4c9d2dd: D
+                        KeysUp:
+                            643ce2244c48c42beffae7d0a93fcca2: Up
+                            84e9bdfa0c56e6e70fb52fb67fdf26c0: W
+                        KeysDown:
+                            c710581bbfee7f9dbffa87d8b423a961: Down
+                            9861448150847263e1dcce732406e8b4: S
+                        KeysReload:
+                            f7748360940667938216bda161f12ed0: E
+                            05744cc71fc6762cd1820202d01398ed: R
+                    eb3c436fd4eb2c94f69dafab64bf1e1b: !MyFPSTest.Player.PlayerController,MyFPSTest.Game
+                        Id: d8176790-817b-421b-8b75-c8c7a183f966
+                        Priority: -1000
+                        friction: 6.0
+                        moveSpeed: 7.0
+                        runAcceleration: 14.0
+                        runDeacceleration: 10.0
+                        airAcceleration: 2.0
+                        airDecceleration: 2.0
+                        airControl: 0.3
+                        sideStrafeAcceleration: 50.0
+                        sideStrafeSpeed: 1.0
+                        holdJumpToBhop: false
+                        PreviousVelocity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Movedir: {X: 0.0, Y: 0.0, Z: 0.0}
+                        MaxRunSpeed: 5.0
+            Base:
+                BasePartAsset: b16eaf2b-c449-482a-b153-8dca932a1fc5:PlayerCharacter
+                BasePartId: ce1caacb-bb27-4e8a-908c-95267265d516
+                InstanceId: 106bf4c6-f44f-4b3f-ad99-ed5a5dc78360
         -   Folder: Complex
             Entity:
                 Id: a64c0c6e-a688-4a61-b889-9c8925a11157
@@ -5037,6 +5244,30 @@ Hierarchy:
                         Children:
                             4eecb3c27affe3478bcc584553d59e41: ref!! 4451ee48-5587-4a2c-82b5-47104c29000f
         -   Entity:
+                Id: a80035b5-0b8c-4d1f-9a6a-eccf42621277
+                Name: Gun
+                Components:
+                    a9c79a3bf064f945b8cb4a186967953c: !TransformComponent
+                        Id: 76c70bbf-d4de-49d2-9f26-a7f752619a17
+                        Position: {X: 1.8508038E-15, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            321d321c570d3e43a2a274d71d7258f5: ref!! 1ffdc9ac-2888-415f-a488-0f6714f17190
+                            3874058b00661242806d2e3f4afd55c1: ref!! 53bb68c2-1483-48bf-b657-e74497bf7332
+                    efd695c8917b8a42a02ea11321380575: !ModelComponent
+                        Id: 8e32a71b-087f-4880-8305-0ab06911f4b9
+                        Model: e9518998-0649-494e-b5db-2711f0d92a7e:Models/MachinegunModel
+                        Materials: {}
+                    39b0129ace88504c8b56a15efbeca890: !ModelNodeLinkComponent
+                        Id: 277f7d55-c55e-4078-92c0-be8f00e7a5b4
+                        Target: null
+                        NodeName: MachinegunBone
+            Base:
+                BasePartAsset: b16eaf2b-c449-482a-b153-8dca932a1fc5:PlayerCharacter
+                BasePartId: da995152-6360-45d7-96cd-6be797de7f08
+                InstanceId: 83b7304b-34e4-4e81-9169-61dbd9711491
+        -   Entity:
                 Id: aab47dbd-67b9-4755-9732-7bd90cf990ad
                 Name: Wall0x2x5
                 Components:
@@ -5071,6 +5302,25 @@ Hierarchy:
                 BasePartAsset: 74898acd-5075-4f06-9a49-b03b385105ff:BlocksPrefabs/Wall0x2x5
                 BasePartId: fbdff817-df62-4a56-83f8-19a9d12589b8
                 InstanceId: 81d301bf-4ea0-4859-9769-fb4bddadaaa9
+        -   Entity:
+                Id: ab0cfe68-f40e-4b0b-857b-d4f5980b48b4
+                Name: BulletCount
+                Components:
+                    3874058b00661242806d2e3f4afd55c1: !TransformComponent
+                        Id: 53bb68c2-1483-48bf-b657-e74497bf7332
+                        Position: {X: 0.00064765656, Y: 0.17203088, Z: -0.010609664}
+                        Rotation: {X: -0.38512552, Y: 1.6653345E-16, Z: -3.366874E-08, W: 0.9228642}
+                        Scale: {X: 0.04, Y: 0.04, Z: 0.04}
+                        Children: {}
+                    a3de2d72fa2fc24d83c344dedd18fc64: !SpriteComponent
+                        Id: 64c9e22e-6580-4af4-9f7e-8c57d81bac36
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: f271b7d1-0e2b-4fec-b95b-324fe475a91c:Bullets
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Base:
+                BasePartAsset: b16eaf2b-c449-482a-b153-8dca932a1fc5:PlayerCharacter
+                BasePartId: a9bbd566-b54a-48d9-b605-2f8373c37ef0
+                InstanceId: 83b7304b-34e4-4e81-9169-61dbd9711491
         -   Folder: Platform
             Entity:
                 Id: ab80ffd1-ddd3-4f6e-b860-622a9bda74bd
@@ -6548,6 +6798,44 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             db07bec9b88cb84e9f8d6d3511eb10f2: ref!! 9dabfe81-649b-4717-82c0-860ee429870a
+        -   Entity:
+                Id: d876d0d1-cd86-4d1f-aed6-d5d344a64796
+                Name: Camera
+                Components:
+                    e7530b9a6be27e47b405f3991f670c13: !TransformComponent
+                        Id: 3f23cdc1-ee88-40b3-9c88-f1a366099e27
+                        Position: {X: 0.0, Y: 1.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            1fe64d64198b4543bfc6b549158775e4: ref!! a3d17b04-1b36-4b9c-bc72-bd148a2ae3da
+                    bdcec17990d67f4eb9d1d3a9197c95a2: !CameraComponent
+                        Id: 768522dc-afd1-4c62-af3e-2f766417a0cc
+                        Name: null
+                        Projection: Perspective
+                        VerticalFieldOfView: 110.0
+                        NearClipPlane: 0.001
+                        Slot: f1ef5817-0725-4b1a-abc9-845d101ec0e6
+                    8a944ab254058c9419f349b1dac150dc: !MyFPSTest.FpsCamera,MyFPSTest.Game
+                        Id: 4eab83f2-b657-432f-80d7-af5c61d22ea4
+                        RotationSpeed: 0.02355
+                        RotationAdaptationSpeed: 5.0
+                    e0f457bb92abf2d59d2fd9b9b97310c1: !MyFPSTest.Player.WeaponScript,MyFPSTest.Game
+                        Id: 3013952b-8eee-477f-81d0-446112a46f45
+                        MaxShootDistance: 50.0
+                        ShootImpulse: 12.0
+                        Cooldown: 0.4
+                        ReloadCooldown: 2.0
+                        RemainingBullets: ref!! 64c9e22e-6580-4af4-9f7e-8c57d81bac36
+                    5ec3e774a44eadc33cc75d4b974e0952: !UIComponent
+                        Id: 5d7d7082-6b30-4bd9-b3d1-bec2e85ff4ce
+                        Page: d0432903-716b-4dab-9140-12615a656eec:UI/Crosshair
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.28, Y: 0.72, Z: 1.0}
+            Base:
+                BasePartAsset: b16eaf2b-c449-482a-b153-8dca932a1fc5:PlayerCharacter
+                BasePartId: 49d3f7c1-6aea-46b7-a803-13b38ea40389
+                InstanceId: 83b7304b-34e4-4e81-9169-61dbd9711491
         -   Folder: Platform
             Entity:
                 Id: d88222a4-d9b5-4497-ada4-3ef3a0264f72
@@ -6871,6 +7159,17 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             c444819e77a60441a6144bd7bd8a4a23: ref!! cee8a0fe-4ba6-44f7-8bcd-c0b8c31a9eec
+        -   Entity:
+                Id: eda475a4-9311-4f89-97a2-96b0b9789d22
+                Name: PlayerCharacter
+                Components:
+                    9aa62c59db9434764079a4538ed072b0: !TransformComponent
+                        Id: bbbf279c-26e4-48eb-a791-249e5180ba66
+                        Position: {X: 7.3688354, Y: 0.0, Z: -3.708664}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            fcf4f6d0a23b9745edd698c8bdca8c1a: ref!! 933d4277-5e35-4ea2-9cd8-0d1af36ad567
         -   Entity:
                 Id: ef0dba52-533d-4cd2-8d7b-ab4438cdd900
                 Name: Stairs1x1x2
@@ -7301,6 +7600,49 @@ Hierarchy:
                 BasePartAsset: 74898acd-5075-4f06-9a49-b03b385105ff:BlocksPrefabs/Wall0x2x5
                 BasePartId: fbdff817-df62-4a56-83f8-19a9d12589b8
                 InstanceId: 82f24475-42e2-46f2-80fd-f09b7543fe7f
+        -   Entity:
+                Id: faccd781-bb04-45cc-81f0-18e838a44940
+                Name: EffectsFeedback
+                Components:
+                    321d321c570d3e43a2a274d71d7258f5: !TransformComponent
+                        Id: 1ffdc9ac-2888-415f-a488-0f6714f17190
+                        Position: {X: 3.225738E-08, Y: 0.1441944, Z: -0.80561554}
+                        Rotation: {X: 0.70710677, Y: 3.8090255E-07, Z: -3.8090255E-07, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    adcef907076b903b6dc8549294427d49: !MyFPSTest.EffectController,MyFPSTest.Game
+                        Id: f35d8cf1-c10b-48c1-a66b-6c74ffccc555
+                        TriggerGroup:
+                            Name: Gunfire
+                            TriggerEvents:
+                                cc2e7fd643efee43a5334538e258744d:
+                                    Name: MuzzleFlash
+                                    SourcePrefab: cbf08506-e7dc-41a6-8c95-38dccc9624b1:VFXPrefabs/vfx-RichMuzzleFlash
+                                    FollowEntity: true
+                                    Duration: 0.6
+                                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    Rotation: {X: 1.0, Y: 0.0, Z: 0.0, W: -4.371139E-08}
+                                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                c2b4a07f896d1143868abfae468c8a51:
+                                    Name: BulletImpact
+                                    SourcePrefab: 79460cee-b4d0-4688-a08f-37c2bfa44ea2:VFXPrefabs/vfx-RichBulletImpact
+                                    FollowEntity: false
+                                    Duration: 1.0
+                                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                25a41a6e2c1e89449f410d4cd3a33c89:
+                                    Name: DamagedTrail
+                                    SourcePrefab: 475cfbeb-e086-4981-832f-dd2bdcab53d4:VFXPrefabs/vfx-DamagedTrail
+                                    FollowEntity: true
+                                    Duration: 6.0
+                                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+            Base:
+                BasePartAsset: b16eaf2b-c449-482a-b153-8dca932a1fc5:PlayerCharacter
+                BasePartId: 47503150-d4ed-4851-9765-5fc2c08dc3db
+                InstanceId: 83b7304b-34e4-4e81-9169-61dbd9711491
         -   Entity:
                 Id: fd2d034d-63f0-4c02-bfa5-3abd39b4ee34
                 Name: Wall0x2x5Window (6)

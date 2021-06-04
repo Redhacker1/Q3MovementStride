@@ -72,7 +72,6 @@ namespace MyFPSTest.Player
         {
             PreviousVelocity = playerVelocity;
             moveDirectionEvent.TryReceive(out Movedir);
-            Console.WriteLine(playerVelocity);
 
             OnGUI();
             QueueJump();
@@ -84,13 +83,8 @@ namespace MyFPSTest.Player
                 {
                     character.SetVelocity(playerVelocity);
                 }
-                else if (Math.Abs(playerVelocity.Z) == 0 && Math.Abs(playerVelocity.X) == 0 && Math.Abs(playerVelocity.Y) == 0)
-                {
-
-                }
                 else
                 {
-                    playerVelocity -= float.Epsilon*2;
                     character.SetVelocity(playerVelocity);
                 }
             }

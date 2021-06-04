@@ -14,6 +14,6 @@ Skeleton: c5910edc-2ec5-4989-805c-96c08c1e7bbc:Models/mannequinModel Skeleton
 RootMotion: false
 PreviewModel: null
 AnimationTimeMinimum: 0:00:00:00.0000000
-AnimationTimeMaximum: 0:00:00:00.9830000
+AnimationTimeMaximum: 0:00:00:00.9833300
 ~SourceHashes:
     d7064665b69ee02ddb199ae62cc3dc7b~../../Resources/Animation/Jump_Loop.fbx: b578f2ccc51e7deedf81789e5911798d

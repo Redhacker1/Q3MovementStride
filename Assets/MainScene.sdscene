@@ -19,6 +19,7 @@ Hierarchy:
         - ref!! 36693d0d-c01a-44c3-94a9-3b4682c42a93
         - ref!! ecac1b97-6173-4917-9cf7-c6c6a00e1d8d
         - ref!! 6c933ddc-0fd5-4e69-a1b8-4c73e168f269
+        - ref!! 7d5fa58f-da90-4d67-915a-105ef92d9141
     Parts:
         -   Entity:
                 Id: 04fe9e5b-5abd-43db-885d-34222a683b31
@@ -116,9 +117,7 @@ Hierarchy:
                         Position: {X: -1.7393772E-07, Y: 1.0000633, Z: -2.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            fda0c41a6c87adf65f7f2ef51975c0f8: ref!! 09a64ab5-319f-46eb-bf72-2b465910db7c
-                            d3a54e5da7e6eaad99b4bcddf3064106: ref!! 33dde859-b5ad-40d2-94ff-40fdc2f5619a
+                        Children: {}
         -   Entity:
                 Id: 143c631c-3dc4-4f46-b7dd-c938b1a59d52
                 Name: Ramp1x1_2x2
@@ -151,6 +150,41 @@ Hierarchy:
                 BasePartAsset: b2c62c0b-a1ee-4fd8-aa69-6fd721500447:BlocksPrefabs/Ramp1x1_2x2 (2)
                 BasePartId: ebb1699f-cbad-48c0-8147-9d3d1236b47b
                 InstanceId: d8d030a6-2812-4870-b94b-583f98fbbe66
+        -   Folder: null
+            Entity:
+                Id: 147e39d1-b4fb-483b-a543-0b7c486a7851
+                Name: GridBase10x10
+                Components:
+                    4eecb3c27affe3478bcc584553d59e41: !TransformComponent
+                        Id: 0de44d2e-f0ba-485b-a664-2175b3646150
+                        Position*: {X: -4.991776, Y: -1.8482082, Z: -9.064489}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7c901dfed21c864283aa0639481520b1: !ModelComponent
+                        Id: 884ddd1b-d951-494a-b6b7-40e3061f4149
+                        Model: cb942b96-a63b-4643-a6a0-312c050ae80d:Models/GridBase10x10
+                        Materials: {}
+                    e892de73aae78041aa74ca19b0b9f867: !StaticColliderComponent
+                        Id: 344e749b-84c1-453d-8a03-e6e74e0f9e7a
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            6f9d4e7e5147bf47ad510aa5f27d122b: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 10.0, Y: 0.3, Z: 10.0}
+                                LocalOffset: {X: 0.0, Y: -0.15, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: 60a0e50e-0f94-4c44-a990-179b00c4d140:BlocksPrefabs/GridBase10x10
+                BasePartId: b045349c-565e-4488-9130-a795b0e3b229
+                InstanceId: 40b505be-078c-4b74-8b39-1cd90774cc9b
         -   Entity:
                 Id: 177822bd-6c14-407b-848a-66f2e40a234f
                 Name: Ramp1x1_2x2
@@ -249,8 +283,6 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            fda0c41a6c87adf65f7f2ef51975c0f8: ref!! ce5f7a96-f282-41bc-b119-a86212b9a452
-                            d3a54e5da7e6eaad99b4bcddf3064106: ref!! 18c96c55-6f7d-4969-9505-97ee57b94d7a
                             3c6ffb11607797a2e24083265624b595: ref!! 2dd8666f-256f-461c-9644-1064e2bfd0a4
         -   Folder: Lights
             Entity:
@@ -269,41 +301,6 @@ Hierarchy:
                             Color: !ColorRgbProvider
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
         -   Entity:
-                Id: 33a835f8-6746-4773-a118-0378bce66945
-                Name: GridBase10x10
-                Components:
-                    4eecb3c27affe3478bcc584553d59e41: !TransformComponent
-                        Id: 53179714-978d-45bf-9b01-ef5ac64511fe
-                        Position*: {X: 8.903747, Y: -1.0, Z: 2.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    7c901dfed21c864283aa0639481520b1: !ModelComponent
-                        Id: 1708507e-f85a-439b-9017-1bda3baa5998
-                        Model: cb942b96-a63b-4643-a6a0-312c050ae80d:Models/GridBase10x10
-                        RenderGroup*: Group0
-                        Materials: {}
-                    e892de73aae78041aa74ca19b0b9f867: !StaticColliderComponent
-                        Id: f795ac69-4443-4f9c-bfee-e6d73b9eeb83
-                        CanSleep: true
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            6f9d4e7e5147bf47ad510aa5f27d122b: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 10.0, Y: 0.3, Z: 10.0}
-                                LocalOffset: {X: 0.0, Y: -0.15, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-            Base:
-                BasePartAsset: 60a0e50e-0f94-4c44-a990-179b00c4d140:BlocksPrefabs/GridBase10x10
-                BasePartId: b045349c-565e-4488-9130-a795b0e3b229
-                InstanceId: 56b97626-4654-4a01-a942-3111a98ba682
-        -   Entity:
                 Id: 36693d0d-c01a-44c3-94a9-3b4682c42a93
                 Name: GridBase10x10
                 Components:
@@ -312,8 +309,7 @@ Hierarchy:
                         Position: {X: -29.14976, Y: 0.0, Z: -3.1002235}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.4, Y: 0.3, Z: 0.4}
-                        Children:
-                            5b7a7cbcbc1fd9999322f136a9de39c8: ref!! 53179714-978d-45bf-9b01-ef5ac64511fe
+                        Children: {}
         -   Entity:
                 Id: 36a3e270-4247-4a8c-b565-9d0b3af13e4b
                 Name: GridBase10x10
@@ -348,38 +344,6 @@ Hierarchy:
                 BasePartAsset: 60a0e50e-0f94-4c44-a990-179b00c4d140:BlocksPrefabs/GridBase10x10
                 BasePartId: b045349c-565e-4488-9130-a795b0e3b229
                 InstanceId: 8f9986cf-9eb0-444b-a028-c151175a0eb2
-        -   Entity:
-                Id: 3f8e0799-6f85-42e8-aaf6-8366caae335e
-                Name: Stairs1x1x2
-                Components:
-                    1fd94bf6112e05418d8b81f8ee7c0a28: !TransformComponent
-                        Id: ce5f7a96-f282-41bc-b119-a86212b9a452
-                        Position*: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    289202be5050af41832ce05e2d398d2c: !ModelComponent
-                        Id: 7a1cf280-a37a-4028-9146-749376e1c465
-                        Model: cea06c9a-6b1f-4a56-9cc1-9333f8b4daa7:Models/Stairs1x1x2
-                        Materials:
-                            74dc3e7c6e633f46a3801edd86a197dd~0: e47db58e-f7b9-4d4a-b19d-3463dcb88360:Materials/GridMTStairs
-                    01635891d64e2c4d98af82259f64e540: !StaticColliderComponent
-                        Id: 92ee2846-dc9f-4fed-afcf-f9d936f2752d
-                        CanSleep: true
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            e50925e86d99e849bde2b006ac86de09: !ColliderShapeAssetDesc
-                                Shape: ce0d4505-267c-4bb1-b45b-4ee1151c2eb2:CollisionMeshes/Stairs1x1x2
-            Base:
-                BasePartAsset: 68067fb6-a2cb-480f-a701-dc11829ebfe5:BlocksPrefabs/Stairs1x1x2
-                BasePartId: b7b6a519-2edb-4e90-88ef-1426d0feac16
-                InstanceId: 6b74b21e-3a1d-4c0a-b0c1-611ce2cd5ce1
         -   Entity:
                 Id: 40e9eebd-1003-42bf-b06f-459a6d501c61
                 Name: EffectsFeedback
@@ -464,38 +428,6 @@ Hierarchy:
                 BasePartId: 49d3f7c1-6aea-46b7-a803-13b38ea40389
                 InstanceId: 5172ca59-0d30-4f37-8eb8-e2298c0b8944
         -   Entity:
-                Id: 659785ca-26f8-4162-8d14-690b85cc1d4a
-                Name: Stairs1x1x2
-                Components:
-                    1fd94bf6112e05418d8b81f8ee7c0a28: !TransformComponent
-                        Id: 09a64ab5-319f-46eb-bf72-2b465910db7c
-                        Position*: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    289202be5050af41832ce05e2d398d2c: !ModelComponent
-                        Id: 8c7b03d2-27ac-4378-ad74-f2f5edf5576f
-                        Model: cea06c9a-6b1f-4a56-9cc1-9333f8b4daa7:Models/Stairs1x1x2
-                        Materials:
-                            74dc3e7c6e633f46a3801edd86a197dd~0: e47db58e-f7b9-4d4a-b19d-3463dcb88360:Materials/GridMTStairs
-                    01635891d64e2c4d98af82259f64e540: !StaticColliderComponent
-                        Id: 19f17445-9158-490c-9d07-dfaf8c888b5c
-                        CanSleep: true
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            e50925e86d99e849bde2b006ac86de09: !ColliderShapeAssetDesc
-                                Shape: ce0d4505-267c-4bb1-b45b-4ee1151c2eb2:CollisionMeshes/Stairs1x1x2
-            Base:
-                BasePartAsset: 68067fb6-a2cb-480f-a701-dc11829ebfe5:BlocksPrefabs/Stairs1x1x2
-                BasePartId: b7b6a519-2edb-4e90-88ef-1426d0feac16
-                InstanceId: 006ebfd4-d202-429a-8d89-a51265e04a9d
-        -   Entity:
                 Id: 6c933ddc-0fd5-4e69-a1b8-4c73e168f269
                 Name: Gate2x3x1
                 Components:
@@ -549,6 +481,16 @@ Hierarchy:
                             7db382a68b6129a7838deb2a7b2d2ef3: ref!! e9d65733-794a-4039-9bfc-cccbefa71cfc
                             2bbfd27422f08b0cd299edc3185c839a: ref!! 49cf8bf7-179a-4756-974d-0689eaa64a20
                             9011ea9ffaa66db7ade5ee795d722b19: ref!! ac9e1c75-54fa-4b93-b565-3320ddcfb5ed
+        -   Entity:
+                Id: 7d5fa58f-da90-4d67-915a-105ef92d9141
+                Name: Info_Player_Start
+                Components:
+                    86c85b3ff2b671d408cecfab4b2c2603: !TransformComponent
+                        Id: f9dc599b-9599-4656-918d-5b3db5d46f44
+                        Position: {X: -27.301369, Y: 2.3841858E-07, Z: 11.999425}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
         -   Entity:
                 Id: 83093f9d-605b-49cf-adc8-191c05b01dfd
                 Name: Box1x1x1
@@ -771,7 +713,7 @@ Hierarchy:
                         Id: 1989bc78-c767-4e36-877c-663954c4398c
                         Priority: -1000
                         friction: 6.0
-                        moveSpeed*: 7.0
+                        moveSpeed*: 6.0
                         runAcceleration: 14.0
                         runDeacceleration: 10.0
                         airAcceleration: 2.0
@@ -794,7 +736,7 @@ Hierarchy:
                 Components:
                     4eecb3c27affe3478bcc584553d59e41: !TransformComponent
                         Id: 3668cf95-0fd6-454f-be19-df2714bf7266
-                        Position*: {X: -4.991776, Y: -1.8482082, Z: 1.026}
+                        Position*: {X: -4.991776, Y: -1.8482082, Z: 0.84747803}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -833,6 +775,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             7725d4cfeb3773cc001646f46f4ec083: ref!! 3668cf95-0fd6-454f-be19-df2714bf7266
+                            6fe6c2d08b5f57a4bfccad2d9b9d38ee: ref!! 0de44d2e-f0ba-485b-a664-2175b3646150
         -   Entity:
                 Id: a9b8bf4f-39f5-4569-88e0-3c68fdbb5be9
                 Name: BulletCount
@@ -864,38 +807,6 @@ Hierarchy:
                         Children:
                             2cfeb90a19df7111f626aaee82e6df2e: ref!! 1d1fe49d-adac-4b7c-8b0d-f968db1700ef
                             4a427f7abb1c7ea5cb001290decbd073: ref!! f9c0de97-1e34-4c04-a9df-498ec8ba47fb
-        -   Entity:
-                Id: ad977ac5-ed9d-4d43-a7ac-3f505beca2d9
-                Name: Stairs1x1x2
-                Components:
-                    1fd94bf6112e05418d8b81f8ee7c0a28: !TransformComponent
-                        Id: 18c96c55-6f7d-4969-9505-97ee57b94d7a
-                        Position*: {X: 1.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    289202be5050af41832ce05e2d398d2c: !ModelComponent
-                        Id: c42e501c-35d6-41bd-97b1-946664748a77
-                        Model: cea06c9a-6b1f-4a56-9cc1-9333f8b4daa7:Models/Stairs1x1x2
-                        Materials:
-                            74dc3e7c6e633f46a3801edd86a197dd~0: e47db58e-f7b9-4d4a-b19d-3463dcb88360:Materials/GridMTStairs
-                    01635891d64e2c4d98af82259f64e540: !StaticColliderComponent
-                        Id: fe8b8505-8049-4747-9314-501c0d14a073
-                        CanSleep: true
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            e50925e86d99e849bde2b006ac86de09: !ColliderShapeAssetDesc
-                                Shape: ce0d4505-267c-4bb1-b45b-4ee1151c2eb2:CollisionMeshes/Stairs1x1x2
-            Base:
-                BasePartAsset: 68067fb6-a2cb-480f-a701-dc11829ebfe5:BlocksPrefabs/Stairs1x1x2
-                BasePartId: b7b6a519-2edb-4e90-88ef-1426d0feac16
-                InstanceId: 7d2771ca-e0de-4aeb-bf47-64a7ed5257ae
         -   Entity:
                 Id: aede01cc-1af4-40e9-86d4-e0eb00716e8c
                 Name: Wall0x2x5Window
@@ -1006,38 +917,6 @@ Hierarchy:
                 BasePartAsset: b16eaf2b-c449-482a-b153-8dca932a1fc5:PlayerCharacter
                 BasePartId: ca6aa6ec-0ba0-41b4-afd6-e0904e96d1bd
                 InstanceId: 5172ca59-0d30-4f37-8eb8-e2298c0b8944
-        -   Entity:
-                Id: b5774177-ece4-485b-833e-2d6d290d98a6
-                Name: Stairs1x1x2
-                Components:
-                    1fd94bf6112e05418d8b81f8ee7c0a28: !TransformComponent
-                        Id: 33dde859-b5ad-40d2-94ff-40fdc2f5619a
-                        Position*: {X: 1.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    289202be5050af41832ce05e2d398d2c: !ModelComponent
-                        Id: e99352b8-cb94-44b4-999c-c655afa481d0
-                        Model: cea06c9a-6b1f-4a56-9cc1-9333f8b4daa7:Models/Stairs1x1x2
-                        Materials:
-                            74dc3e7c6e633f46a3801edd86a197dd~0: e47db58e-f7b9-4d4a-b19d-3463dcb88360:Materials/GridMTStairs
-                    01635891d64e2c4d98af82259f64e540: !StaticColliderComponent
-                        Id: 47c35bb2-2567-4d3c-be9a-4342496616a8
-                        CanSleep: true
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            e50925e86d99e849bde2b006ac86de09: !ColliderShapeAssetDesc
-                                Shape: ce0d4505-267c-4bb1-b45b-4ee1151c2eb2:CollisionMeshes/Stairs1x1x2
-            Base:
-                BasePartAsset: 68067fb6-a2cb-480f-a701-dc11829ebfe5:BlocksPrefabs/Stairs1x1x2
-                BasePartId: b7b6a519-2edb-4e90-88ef-1426d0feac16
-                InstanceId: 6fda0a1a-5d01-4263-81c7-e2fcb879fd85
         -   Entity:
                 Id: be4d6348-9a11-45de-aef5-70f0d5233dcb
                 Name: GridBase10x10

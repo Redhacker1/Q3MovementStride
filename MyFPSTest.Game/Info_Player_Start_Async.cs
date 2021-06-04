@@ -35,6 +35,7 @@ namespace MyFPSTest
 
             while (Game.IsRunning)
             {
+                Console.WriteLine(Entity.Transform.Position);
                 // Do stuff every new frame
                 //var Hello = Player.Get<PlayerController>();
                 //Console.WriteLine(Hello == null);
